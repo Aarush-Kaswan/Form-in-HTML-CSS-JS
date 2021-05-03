@@ -1,0 +1,49 @@
+body{
+	margin:0;
+}
+header{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 150%;
+	padding: 2vw;
+	background: yellow;
+}
+form{
+	font-variant: small-caps;
+	margin: 3vw;
+}
+.first-column{
+	width: 30vw;
+	display: inline-block;
+	margin-bottom: 1vh;
+}
+.second-column{
+	width: 50vw;
+	display: inline-block;
+	margin-bottom: 1vh;
+}
+input[type=text], input[type=number], input[type=password], input[type=email]{
+	width: 60%;
+}
+select{
+	width: 20%;
+}
+
+input:focus{
+	background: lightblue;
+}
+input[type=submit]{
+	margin: 1vw;
+	padding: 1vw;
+	font-variant: small-caps;
+	font-size: 120%;
+	border-radius: 10%;
+	background: lightgreen;
+	float: right;
+}
+input[type=submit]:hover{
+	background: green;
+}
+#nick{
+	display: none;
+}

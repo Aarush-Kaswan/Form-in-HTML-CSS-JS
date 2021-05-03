@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<script type="text/javascript" src="js/form.js"></script>
+</head>
+<body>
+	<header>Form</header>
+
+	<form>
+		<fieldset id="fone">
+
+			<div class="row">
+				<div class="first-column">
+					<label for="uname">Username</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="uname" name="usernameme">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="upass">Password</label>
+				</div>
+				<div class="second-column">
+					<input type="Password" id="upass" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Must contain at least one  number, one uppercase and lowercase letter, and at least 8 or more characters">
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset id="ftwo">
+			<legend>Personal Info.</legend>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="fname">First Name</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="fname" name="fname">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="lname">Last Name</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="lname" name="lname">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="nickname">Nick Name?</label>
+				</div>
+				<div class="second-column">
+					<input type="checkbox" id="nickname" name="nickname" onchange="enterNickname()">
+				</div>
+			</div>
+
+			<div class="row" id="nick">
+				<div class="first-column">
+					<label for="nickname">Nick Name*</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="nname" name="nname">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="dob">Date of Birth</label>
+				</div>
+				<div class="second-column">
+					<input type="Date" id="dob" name="dob">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="gen">Gender</label>
+				</div>
+				<div class="second-column">
+					<select id="gen" name="gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset id="fthree">
+			<legend>Contact Details</legend>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="email">Email ID</label>
+				</div>
+				<div class="second-column">
+					<input type="Email" id="email" name="email">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="pno">Phone Number</label>
+				</div>
+				<div class="second-column">
+					<input type="Number" id="pno" name="pno" pattern="[0-9]{10}">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="lno">Landline Number</label>
+				</div>
+				<div class="second-column">
+					<input type="Number" id="lno" name="lno" pattern="[0-9]{7}">
+				</div>
+			</div>
+		</fieldset>
+		
+		<fieldset id="ffour">
+			<legend>Shipping Address</legend>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="add">Address</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="add" name="add">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="city">City</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="city" name="city">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="state">State</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="state" name="state">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="pin">Pincode</label>
+				</div>
+				<div class="second-column">
+					<input type="number" id="pin" name="pin" pattern="[0-9]{6}">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="landmark">Landmark</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="landmark" name="landmark">
+				</div>
+			</div>
+
+		</fieldset>
+
+		<label for="copy-add">Is the Billing Address same as the Shipping Address?</label>
+		<input type="checkbox" id="copy-add" name="copy-add" onchange="billingFunction()">
+		
+		<fieldset id="ffive">
+			<legend>Billing Address</legend>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="bill-add">Address</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="bill-add" name="bill-add">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="bill-city">City</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="bill-city" name="bill-city">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="bill-state">State</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="bill-state" name="bill-state">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="bill-pin">Pincode</label>
+				</div>
+				<div class="second-column">
+					<input type="number" id="bill-pin" name="bill-pin" pattern="[0-9]{6}">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="first-column">
+					<label for="bill-landmark">Landmark</label>
+				</div>
+				<div class="second-column">
+					<input type="text" id="bill-landmark" name="bill-landmark">
+				</div>
+			</div>
+		</fieldset>
+		
+		<div class="row">
+			<input type="Submit" value="Submit">
+		</div>
+
+	</form>
+
+</body>
+</html>
